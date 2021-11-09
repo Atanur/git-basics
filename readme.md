@@ -9,28 +9,28 @@
 <dt align="center" id="vcs">Version Control System (VCS) nedir?</dt>
 <dd>Oluşturduğunuz dosyadaki değişiklikleri kaydedip daha sonra geri çağırabilmenizi sağlayan bir sistemdir. Bu sistem, aktif çalışan sistemlerin üstünde geliştirme yapabilmenizi sağlarken, aynı zamanda oluşan sorunların da kolay yoldan çözülebilmesine olanak sağlar. </dd>
 <dt align="center" id="git">Git (git-scm) nedir?</dt>
-<dd>Git bir paylaşımlı versiyon kontrol sistemidir (Distributed Version Control System). Projeyle ilgili gelişmeleri birçok kişi arasında kontrol altına almak ve yapılan tüm değişiklikleri izlemek için kullanılan ücretsiz ve açık kaynak kodlu bir sistemdir. Standart bir VCSden farkı projenin tüm sürümlerini depolamak için merkezi bir sunucuya güvenmek yerine, her geliştirici projenin bir kopyasını kendi sabit diskinde saklar. Buna klonlama denir. Bu klonlar projenin meta verilerini barındırmazken orjinal dosya sabit bir sunucuda veya Github gibi bulut tabanlı hizmetlerde barındırılabilir.</dd>
+<dd>Git bir paylaşımlı versiyon kontrol sistemidir (Distributed Version Control System). Projeyle ilgili gelişmeleri birçok kişi arasında kontrol altına almak ve yapılan tüm değişiklikleri izlemek için kullanılan ücretsiz ve açık kaynak kodlu bir sistemdir. Standart bir VCSden farkı projenin tüm sürümlerini depolamak için merkezi bir sunucuya güvenmek yerine, her geliştirici projenin bir kopyasını kendi sabit diskinde saklar. Buna klonlama denir. Bu klonlar projenin meta verilerini barındırmazken orijinal dosya sabit bir sunucuda veya Github gibi bulut tabanlı hizmetlerde barındırılabilir.</dd>
 <dt align="center" id="why">Neden Git kullanmalıyız?</dt>
-<dd>Projenizi sabit bir diskte barındırırken bir problemle karşılaştığınızda çözüm üretmek nerdeyse imkansızdır. Bu durumlar için projenizi düzenli olarak yedekleme ihtiyacı duyabilirsiniz ama projeniz büyür ve ekibiniz genişler, sonuç olarak artık yedeklenemeyecek boyutlara gelirse ne olucak? İşte bu durumlar için Projenin başında doğru kararı vermek çok önemlidir. Git bu gibi durumlarda sizin başınızı büyük bir beladan kuratabilir çünkü verileri kaydetme aşamasında sizin taleplerinizi dinler ve gerekli dosyaları yedeklemenize olanak sağlar. bunun yanı sıra hiç bir ortak ağa bağlı kalmadan geliştirme yapabilmenize yardımcı olur. son olarak git, takımların eş zamanlı geliştirme yapmasında kolaylık sağlar.</dd>
+<dd>Projenizi sabit bir diskte barındırırken bir problemle karşılaştığınızda çözüm üretmek neredeyse  imkansızdır. Bu durumlar için projenizi düzenli olarak yedekleme ihtiyacı duyabilirsiniz ama projeniz büyür ve ekibiniz genişler, sonuç olarak artık yedeklenemeyecek boyutlara gelirse ne olacak? İşte bu durumlar için Projenin başında doğru kararı vermek çok önemlidir. Git bu gibi durumlarda sizin başınızı büyük bir beladan kurtarabilir çünkü verileri kaydetme aşamasında sizin taleplerinizi dinler ve gerekli dosyaları yedeklemenize olanak sağlar. Bunun yanı sıra hiçbir ortak ağa bağlı kalmadan geliştirme yapabilmenize yardımcı olur. Son olarak git, takımların eş zamanlı geliştirme yapmasında kolaylık sağlar.</dd>
 </dl>
 
 ---
 
 <h3 id="installation">Git kurulumu</h3>
-<p>Giti bilgisayarınıza <a href="https://git-scm.com/downloads" target="_blank">bu linkten</a>   indirebilirsiniz. İndirme işlemi sırasında dikkat etmeniz gereken tek şey, eğer vscode kullanıyorsanız, aşağıda gördüğünüz gibi vscode'u gitin varsayılan editörü olarak seçin.</p>
+<p>Git'i bilgisayarınıza <a href="https://git-scm.com/downloads" target="_blank">bu linkten</a>   indirebilirsiniz. İndirme işlemi sırasında dikkat etmeniz gereken tek şey, eğer vscode kullanıyorsanız, aşağıda gördüğünüz gibi vscode'u git'in varsayılan editörü olarak seçin.</p>
 <img src="./img/git-install.png" />
 
 ---
 
-<h3 id="after-installation">Giti kurdum, sırada ne var?</h3>
-<p>Git'i bilgisayarınıza kurduktan sonra ilk yapmanız gereken giti kendi kişisel bilginize göre yapılandırmanızdır. Bu ne anlama geliyor dicek olursanız; Önceden bahsettiğim gibi git, paylaşımlı bir versiyon kontrol sistemidir. birden fazla kişiyle bir projede uğraşırken git'in içindeki kimlik bilgileriniz sizi diğer kişilerden ayırt etmek için kullanılır. bunlar email adresi ve görünen isiminizdir. bunları konfigüre etmek için bilgisayarınızın komut satırına </p>
+<h3 id="after-installation">Git'i kurdum, sırada ne var?</h3>
+<p>Git'i bilgisayarınıza kurduktan sonra ilk yapmanız gereken git'i kendi kişisel bilginize göre yapılandırmanızdır. Bu ne anlama geliyor diyecek olursanız; Önceden bahsettiğim gibi git, paylaşımlı bir versiyon kontrol sistemidir. Birden fazla kişiyle bir projede uğraşırken git'in içindeki kimlik bilgileriniz sizi diğer kişilerden ayırt etmek için kullanılır. Bunlar e-posta adresi ve görünen isiminizdir. Bunları konfigüre etmek için bilgisayarınızın komut satırına </p>
 
 ```
 git config --global user.name {kullanıcı isiminiz}
 git config --global user.email {email adresiniz}
 ```
 
-<p>yazmanız yeterli olucaktır. bu aşamadan sonra artık git'i gerek çevrim için gerekse çevrımdışı olarak kullanmaya hazırsınız.</p>
+<p>yazmanız yeterli olacaktır. Bu aşamadan sonra artık git'i gerek çevrim için gerekse çevrim dışı olarak kullanmaya hazırsınız.</p>
 
 ---
 
@@ -86,14 +86,14 @@ git config --global user.email {email adresiniz}
 <dd>Yapılan değişiklerin sadece bir kısmını git'e eklemek istiyorsanız
 
 `git add [file/folder]`
-kullanabilirsiniz. bu komut yalnızca seçilen dosyaların veya klasörlerin eklenmesini sağlıcaktır.
+kullanabilirsiniz. Bu komut yalnızca seçilen dosyaların veya klasörlerin eklenmesini sağlayacaktır.
 
 </dd>
 <dt>2.Yöntem</dt>
 <dd>Yapılan değişiklerin tümünü git'e eklemek istiyorsanız
 
 `git add .`
-kullanabilirsiniz. burdaki "." ifadesi varsayılan dosyayı ve alt klasörlerini kapsamaktadır.
+kullanabilirsiniz. Burdaki "." ifadesi varsayılan dosyayı ve alt klasörlerini kapsamaktadır.
 
 </dd>
 </dl>
@@ -107,14 +107,14 @@ kullanabilirsiniz. burdaki "." ifadesi varsayılan dosyayı ve alt klasörlerini
 <dd>Yapılan değişiklerin bir mesaj ile eklemek için
 
 `git commit -m "message"`
-kullanabilirsiniz. burdaki "-m" ifadesi commit'in tipinin bir message olduğunu tanımlar.
+kullanabilirsiniz. Burdaki "-m" ifadesi commit'in tipinin bir message olduğunu tanımlar.
 
 </dd>
 <dt>2.Yöntem</dt>
-<dd>her defasında hem git add hem de git commit yapmak yerine
+<dd>Her defasında hem git add hem de git commit yapmak yerine
 
 `git commit -am "message"`
-kullanabilirsiniz. bu komut bir taşla iki kuş vurmanızı sağlıcaktır.
+kullanabilirsiniz. Bu komut bir taşla iki kuş vurmanızı sağlayacaktır.
 
 </dd>
 </dl>
@@ -132,7 +132,7 @@ kullanılır.
 ---
 
 <h3 id="diff">Git diff</h3>
-<p>Commitlenmiş localdeki dosyalar ile uzak sunucudaki  farklılıkları gösterir.</p>
+<p>Commitlenmiş local'deki dosyalar ile uzak sunucudaki  farklılıkları gösterir.</p>
 
 ---
 
@@ -142,17 +142,17 @@ kullanılır.
 ---
 
 <h3 id="branch">Git branch</h3>
-<p>Türkçesi "dal/şube" anlamına gelen branch mantığı git'in en önemli yapılarından biridir. burda işlem var olan bir yapıyı kopyalayıp yeni bir dalda yürütmeyi sağlar. </p>
+<p>Türkçesi "dal/şube" anlamına gelen branch mantığı git'in en önemli yapılarından biridir. Burada işlem var olan bir yapıyı kopyalayıp yeni bir dalda yürütmeyi sağlar. </p>
 <dl>
 <dt>1.Yöntem</dt>
-<dd>uzak sunucudaki  tüm dalları görmek için
+<dd>uzak sunucudaki tüm dalları görmek için
 
 `git branch`
 kullanabilirsiniz.
 
 </dd>
 <dt>2.Yöntem</dt>
-<dd>uzak sunucuda yeni bir dal oluşturmak için
+<dd>Uzak sunucuda yeni bir dal oluşturmak için
 
 `git branch "branch name"`
 kullanabilirsiniz.
@@ -173,12 +173,12 @@ kullanabilirsiniz.
 ---
 
 <h3 id="fetch">Git fetch</h3>
-<p>Uzak sunucudaki değişiklikleri localdeki projeyle karşılaştırır herhangi bir dosya aktarımı yapmaz.</p>
+<p>Uzak sunucudaki değişiklikleri local'deki projeyle karşılaştırır herhangi bir dosya aktarımı yapmaz.</p>
 
 ---
 
 <h3 id="pull">Git pull</h3>
-<p>Fetch'in aksine uzak sunucudaki değişiklikleri localdeki projeyle birleştirir veya dosyaları aktarır.</p>
+<p>Fetch'in aksine uzak sunucudaki değişiklikleri local'deki projeyle birleştirir veya dosyaları aktarır.</p>
 
 ---
 
@@ -193,7 +193,7 @@ kullanabilirsiniz.
 
 </dd>
 <dt>2.Yöntem</dt>
-<dd>Seçilen committe yapılan değişikliği görmek için comit'in idsi ile
+<dd>Seçilen commit üzerinde yapılan değişikliği görmek için commit'in idsi ile
 
 `git show "commit id"`
 kullanabilirsiniz.
@@ -204,7 +204,7 @@ kullanabilirsiniz.
 ---
 
 <h3 id="reset">Git reset</h3>
-<p><a>Head</a>'i sıfırlamamızı sağlar. bu ne anlama gelir dicek iseniz; <a>Head</a>'e kadar olan tüm commitleri kaldırır diyebiliriz. Peki ama bunu neden yapalım? Bunun aslında bir çok açıklaması var ama en bariz örnek yapılan yanlış bir commit'in önüne geçmek diyebiliriz. Son olarak bu reset işlemini yapmanın 3 farklı yol var</p>
+<p><a>Head</a>'i sıfırlamamızı sağlar. Bu ne anlama gelir diyecekseniz; <a>Head</a>'e kadar olan tüm commitleri kaldırır diyebiliriz. Peki ama bunu neden yapalım? Bunun aslında birçok açıklaması var ama en bariz örnek yapılan yanlış bir commit'in önüne geçmek diyebiliriz. Son olarak bu reset işlemini yapmanın 3 farklı yol var</p>
 <dl>
 <dt>1.Yöntem</dt>
 <dd>Soft komutu ile kullanmak; Seçilen commit ve sonrasındaki commitleri git'e yeni eklenmiş ama henüz commit yapılmamış hale getirmek için
@@ -214,7 +214,7 @@ kullanabilirsiniz.
 
 </dd>
 <dt>2.Yöntem</dt>
-<dd>Mixed komutu ile kullanmak; Soft komutuna benzer olup tek farkı yaplan değişiklikleri git'e henüz eklememiş olmasıdır. Yani
+<dd>Mixed komutu ile kullanmak; Soft komutuna benzer olup tek farkı yapılan değişiklikleri git'e henüz eklememiş olmasıdır. Yani
 henüz add ve commit işlemi yap yapılmamış hale getirmek için
 
 `git reset --mixed "commit id"`
@@ -234,7 +234,7 @@ kullanabilirsiniz.
 
 <h3 id="stash">Git stash</h3>
 
-<p>Commit yapısına benzer olup arka planda stack yapısını barındırır. Bir çok kullanım alanı da mevcuttur. Commit çöplüğünü önlemek, ortak projelerde kayıpsız ilerlemek ve günlük çalışmaları kayıt altına almak bu yapının kullanım amacına örnek verilebilir. Aynı zamanda stashler, büyük projeler için ileriye dönük bir yatırımdır. Peki stash yapısı nasıl çalışır?  </p>
+<p>Commit yapısına benzer olup arka planda stack yapısını barındırır. Birçok kullanım alanı da mevcuttur. Commit çöplüğünü önlemek, ortak projelerde kayıpsız ilerlemek ve günlük çalışmaları kayıt altına almak bu yapının kullanım amacına örnek verilebilir. Aynı zamanda stashler, büyük projeler için ileriye dönük bir yatırımdır. Peki stash yapısı nasıl çalışır?  </p>
 
 <dl>
 <dt>Stash list</dt>
@@ -284,7 +284,7 @@ kullanırız
 ---
 
 <h3 id="rm">Git rm</h3>
-<p> Git rm, Seçilen dosyayı ve ya klasörü git üzerinden siler.</p>
+<p> Git rm, Seçilen dosyayı veya klasörü git üzerinden siler.</p>
 
 ---
 
@@ -304,6 +304,6 @@ kullanabilirsiniz</p>
 ---
 
 <h3 id="head">Git Head nedir?</h3>
-<p>Yapılan son commit'e projenin head'i denir. gitin üzerinde çoğu işlem Head üzerinden yapılır.</p>
+<p>Yapılan son commit'e projenin head'i denir. Git'in üzerinde çoğu işlem Head üzerinden yapılır.</p>
 
 ---
